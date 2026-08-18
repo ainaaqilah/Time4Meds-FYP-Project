@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="40dp"
+        android:gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medication Details"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#1B3B3D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You may edit the details."
+                android:textColor="#94A3B8"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medication Name: *"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#00B4DB"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter medication name"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage: *"
+                            android:textSize="14sp"
+                            android:textColor="#00B4DB"
+                            android:layout_marginBottom="8dp"/>
+                        <EditText
+                            android:id="@+id/etDosage"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="e.g., 1 pill"
+                            android:background="@drawable/rounded_edittext"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Frequency: *"
+                            android:textSize="14sp"
+                            android:textColor="#00B4DB"
+                            android:layout_marginBottom="8dp"/>
+                        <EditText
+                            android:id="@+id/etFrequency"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Twice a day"
+                            android:background="@drawable/rounded_edittext"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Form Type: *"
+                    android:textSize="14sp"
+                    android:textColor="#00B4DB"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_spinner"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Received Quantity:"
+                    android:textSize="14sp"
+                    android:textColor="#00B4DB"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="e.g., 30"
+                    android:inputType="number"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes:"
+                    android:textSize="14sp"
+                    android:textColor="#00B4DB"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:gravity="top"
+                    android:hint="Optional instructions..."
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="16dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save"
+            android:layout_marginTop="24dp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/vibrant_button_gradient"
+            android:elevation="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Cancel"
+            android:layout_marginTop="12dp"
+            android:textColor="#94A3B8"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.time4meds"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions needed for SOS alert -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <!-- Application -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Time4Meds">
+
+        <!-- this is for Tutorial section -->
+        <activity android:name=".TutorialActivity"/>
+
+        <!-- this is for FAQ section -->
+        <activity android:name=".FAQActivity"/>
+
+        <!-- this is for history -->
+        <activity android:name=".HistoryActivity" />
+
+        <!-- this is for daily checklist -->
+        <activity android:name=".DailyChecklistActivity" />
+
+        <!-- this is for reminders -->
+        <activity android:name=".ReminderListActivity" />
+        <activity android:name=".ReminderDetailsActivity" />
+        <activity android:name=".AddReminderActivity" />
+
+        <!-- this is for help section -->
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".AboutUsActivity" />
+
+        <!-- this is for medication list -->
+        <activity android:name=".MedicationListActivity" />
+        <activity android:name=".AddMedicationActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MedicationDetailsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- this is for welcomepage of selected profile -->
+        <activity
+            android:name=".ElderlyWelcomepageActivity">
+        </activity>
+
+        <!-- this is for choosing which profile -->
+        <activity
+            android:name=".AddProfileActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProfileListActivity"
+            android:exported="true" />
+
+        <!-- this is for login and register -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- this is for splash screen -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Time4Meds.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Receiver for notification action button -->
+        <receiver
+            android:name=".NotificationActionReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

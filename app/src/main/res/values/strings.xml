@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Time4Meds</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- add elderly -->
+    <string name="select_gender_prompt">Select Gender</string>
+
+
+    <!-- add meds -->
+    <string-array name="med_form_options">
+        <item>Tablet</item>
+        <item>Capsule</item>
+        <item>Syrup</item>
+        <item>Injection</item>
+        <item>Cream</item>
+    </string-array>
+
+    <string-array name="medication_forms">
+        <item>Tablet</item>
+        <item>Capsule</item>
+        <item>Syrup</item>
+        <item>Injection</item>
+        <item>Cream</item>
+    </string-array>
+
+
+
+</resources>

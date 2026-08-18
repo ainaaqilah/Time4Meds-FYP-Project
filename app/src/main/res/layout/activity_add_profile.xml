@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#1B3B3D"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a new profile for your loved ones."
+            android:textColor="#94A3B8"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/placeholder"
+                app:civ_border_width="4dp"
+                app:civ_border_color="#FFFFFF"
+                android:elevation="4dp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignBottom="@id/ivPhoto"
+                android:layout_alignEnd="@id/ivPhoto"
+                android:background="@drawable/vibrant_button_gradient_small"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="#FFFFFF"
+                android:elevation="6dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:text="Full Name: *"
+            android:textColor="#1B3B3D"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter elderly name"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/modern_input_bg"
+            android:textColor="#1B3B3D"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:text="Age: *"
+                    android:textColor="#1B3B3D"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/edtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Years"
+                    android:inputType="number"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/modern_input_bg"
+                    android:textColor="#1B3B3D"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:text="Gender: *"
+                    android:textColor="#1B3B3D"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/modern_input_bg"
+                    android:paddingHorizontal="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="Medical Information:"
+            android:textColor="#1B3B3D"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edtMedicalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write medical details (allergies, etc)"
+            android:minLines="3"
+            android:gravity="top"
+            android:padding="20dp"
+            android:background="@drawable/modern_input_bg"
+            android:textColor="#1B3B3D"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Emergency Contact: *"
+            android:textColor="#1B3B3D"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edtEmergencyContact"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/modern_input_bg"
+            android:textColor="#1B3B3D"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Add"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/vibrant_button_gradient"
+                android:elevation="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Cancel"
+                android:textColor="#94A3B8"
+                android:background="@android:color/transparent"
+                android:textAllCaps="false" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

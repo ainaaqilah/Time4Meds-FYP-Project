@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main app theme -->
+    <style name="Theme.Time4Meds" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize later if you want -->
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.Time4Meds.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#009688</item> <!-- teal background -->
+    </style>
+
+    <!-- logo authentication user logo style -->
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+
+</resources>

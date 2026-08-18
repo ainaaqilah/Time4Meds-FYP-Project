@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/today" android:title="Today"/>
+    <item android:id="@+id/week" android:title="Last 1 Week"/>
+    <item android:id="@+id/month" android:title="Last 1 Month"/>
+    <item android:id="@+id/three_months" android:title="Last 3 Months"/>
+</menu>

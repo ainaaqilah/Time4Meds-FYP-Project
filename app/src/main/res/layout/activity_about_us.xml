@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <RelativeLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/vibrant_button_gradient"
+        android:padding="24dp">
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-60dp"
+            android:layout_marginTop="-60dp"
+            android:background="@drawable/circle_overlay_light"
+            android:alpha="0.15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/time4meds_logo"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:strokeColor="#80FFFFFF"
+                app:strokeWidth="4dp"/>
+
+            <TextView
+                android:id="@+id/tvAboutHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textSize="32sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tvAboutTagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Standing beside you, Every Step of Care"
+                android:textSize="14sp"
+                android:textColor="#E0F7FA"
+                android:fontFamily="sans-serif-medium"
+                android:alpha="0.9"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerContainer"
+        android:layout_marginTop="-40dp"
+        android:layout_above="@id/bottomNav"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/tvStoryHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OUR STORY"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#00B4DB"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tvStoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This app was built to support families and caregivers who juggle busy schedules while caring for elderly loved ones at home."
+                    android:textSize="15sp"
+                    android:textColor="#475569"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9"
+                    android:layout_marginVertical="24dp"/>
+
+                <TextView
+                    android:id="@+id/tvValuesHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CORE VALUES"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#00B4DB"
+                    android:letterSpacing="0.1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <TextView
+                            android:text="🕒"
+                            android:textSize="20sp"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reliability – Never miss a dose."
+                            android:textColor="#475569"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:text="❤️"
+                            android:textSize="20sp"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Support – Reducing caregiver stress."
+                            android:textColor="#475569"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:text="🔒"
+                            android:textSize="20sp"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Safety – Data is handled with care."
+                            android:textColor="#475569"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9"
+                    android:layout_marginVertical="24dp"/>
+
+                <TextView
+                    android:id="@+id/tvMissionHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OUR MISSION"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#00B4DB"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tvMissionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Our mission is to make caregiving easier and safer by helping caregivers manage elderly medication schedules with confidence and peace of mind."
+                    android:textSize="15sp"
+                    android:textColor="#475569"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvClosing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Together, we can make caregiving simpler and safer."
+                    android:textSize="15sp"
+                    android:textColor="#00B4DB"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvCopyright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="© 2026 Time4Meds. By Ainaa Aqilah (2023149131)"
+                    android:textSize="11sp"
+                    android:textColor="#94A3B8"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/navProfiles"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_profiles"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:tint="#94A3B8"/>
+
+                <TextView
+                    android:text="Profiles"
+                    android:textSize="11sp"
+                    android:textColor="#94A3B8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView android:src="@drawable/ic_home"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:tint="#94A3B8"/>
+
+                <TextView android:text="Home"
+                    android:textSize="11sp"
+                    android:textColor="#94A3B8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navHelp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_help"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:tint="#00B4DB"/>
+
+                <TextView
+                    android:text="Help"
+                    android:textSize="11sp"
+                    android:textColor="#00B4DB"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
